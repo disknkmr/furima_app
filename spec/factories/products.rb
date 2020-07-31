@@ -1,19 +1,19 @@
 FactoryBot.define do
-
   factory :product do
-    price               {""}
-    name                {""}
-    introduction        {""}
-    condition           {""}
-    brand               {""}
-    category            {""}
-    seller              {""}
-    buyer               {""}
-    trading_status      {""}
-    closed_deal_date    {""}
-    prep_date           {""}
-    size                {""}
-    shipping_fee        {""}
-  end 
 
+    name               {""}
+    introduction       {""}
+    size_id            {""}
+    barnd_id           {""}
+    condition_id       {""}
+    postage_payer_id   {""}
+    prefecture_code    {""}
+    prep_date_id       {""}
+    price              {""}
+    trading_status     {""}
+    closed_deal_date   {""}
+    seller_id,         {""}
+    buyer_id           {""}
+
+  end 
 end
