@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_29_071020) do
+ActiveRecord::Schema.define(version: 2020_07_30_080143) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -51,9 +51,26 @@ ActiveRecord::Schema.define(version: 2020_07_29_071020) do
     t.index ["product_id"], name: "index_photos_on_product_id"
   end
 
+  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "introduction", null: false
+    t.integer "size_id", null: false
+    t.bigint "brand_id"
+    t.integer "condition_id", null: false
+    t.integer "postage_payer_id", null: false
+    t.integer "prefecture_code", null: false
+    t.integer "prep_date_id", null: false
+    t.integer "price", null: false
+    t.integer "trading_status", default: 1, null: false
+    t.string "closed_deal_date"
+    t.integer "seller_id", null: false
+    t.integer "buyer_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["brand_id"], name: "index_products_on_brand_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-
-
     t.string "nickname", null: false
     t.string "email", null: false
     t.string "encrypted_password", null: false
@@ -74,4 +91,5 @@ ActiveRecord::Schema.define(version: 2020_07_29_071020) do
   end
 
   add_foreign_key "deliver_addresses", "users"
+  add_foreign_key "products", "brands"
 end
