@@ -15,7 +15,7 @@ class Product < ApplicationRecord
   belongs_to_active_hash :condition
   belongs_to_active_hash :postage_payer
   belongs_to_active_hash :prep_date
-  accepts_nested_attributes_for :photo
+  # accepts_nested_attributes_for :photo
 
 
   enum postage_payer: {

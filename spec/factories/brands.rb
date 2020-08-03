@@ -1,7 +1,7 @@
 FactoryBot.define do
 
   factory :brand do
-    name       {"paulsmith"}
+    name       { "aaa" }
   end
   
 end

@@ -4,7 +4,7 @@ FactoryBot.define do
     name               {"太朗の人形"}
     introduction       {"最高です"}
     size_id            {1}
-    barnd_id           {1}
+    brand_id           {1}
     condition_id       {1}
     postage_payer_id   {1}
     prefecture_code    {1}
